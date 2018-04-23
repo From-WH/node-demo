@@ -15,15 +15,14 @@
     <script>
         button.addEventListener('click',(e)=>{
             $.ajax({                          //这是不是Ajax，一个动态的script
-                url: "http://jack:8002/pay",
-                dataType: "jsonp",
-                success: function (response) {
+                url: "http://jack:8002/pay",     //告诉url
+                dataType: "jsonp",              //告诉使用JSONP
+                success: function (response) {   //告诉成功后要做什么
                     if (response === 'success') {
                         amount.innerText = amount.innerText - 1
                     }
                 }
             })
-            $.jsonp()
         })
           
             
