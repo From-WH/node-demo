@@ -13,7 +13,7 @@
     <button id="button">打钱</button>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        document.body.appendChild(script)
+        button.addEventListener('click',(e)=>{
             $.ajax({                          //这是不是Ajax，一个动态的script
                 url: "http://jack:8002/pay",
                 dataType: "jsonp",
@@ -24,6 +24,9 @@
                 }
             })
             $.jsonp()
+        })
+          
+            
             
         // let script = document.createElement('scripy')
         // let functionName = 'frank' + parseInt(Math.random() * 10000, 10)
